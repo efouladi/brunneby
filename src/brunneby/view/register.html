@@ -1,31 +1,41 @@
 <form class="form-horizontal">
-  <div class="control-group">
-    <label class="control-label" for="inputUsername">Username</label>
+  <div class="control-group" id="inputUsername">
+    <label class="control-label" for="username">Username</label>
     <div class="controls">
-      <input type="text" id="inputUsername" placeholder="Email">
+      <input type="text" name="username">
     </div>
   </div>
-  <div class="control-group">
-    <label class="control-label" for="inputEmail">Email</label>
+  <div class="control-group" id="inputEmail">
+    <label class="control-label" for="Email">E-mail</label>
     <div class="controls">
-      <input type="text" id="inputEmail" placeholder="Email">
+      <input type="text" name="email">
     </div>
   </div>
-  <div class="control-group">
+  <div class="control-group" id="inputPassword">
     <label class="control-label" for="inputPassword">Password</label>
     <div class="controls">
-      <input type="password" id="inputPassword" placeholder="Password">
+      <input type="password" name="password">
     </div>
   </div>
-  <div class="control-group">
+  <div class="control-group" id="inputPasswordConfirm">
     <label class="control-label" for="inputPasswordConfirm">Confirm Password</label>
     <div class="controls">
-      <input type="password" id="inputPasswordConfirm" placeholder="Password">
+      <input type="password" name="confirm-password">
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="users-categories">Role</label>
+    <div class="controls">
+      <select name="cat-id" id="users-categories">
+
+        <option value="1">test</option>
+
+      </select>
     </div>
   </div>
   <div class="control-group">
     <div class="controls">
-      <button type="submit" class="btn">Register</button>
+      <input type="submit" class="btn" value="Register" />
     </div>
   </div>
 </form> 

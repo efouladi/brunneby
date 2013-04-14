@@ -1,132 +1,129 @@
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
+  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+    <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+      <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+        <head>
+          <meta charset="utf-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+          <title></title>
+          <meta name="description" content="">
+          <meta name="viewport" content="width=device-width">
 
-        <link rel="stylesheet" href="css/bootstrap.css">
-        <style>
+          <link rel="stylesheet" href="css/bootstrap.css">
+          <style>
             body {
-                padding-top: 60px;
-                padding-bottom: 40px;
+              padding-top: 60px;
+              padding-bottom: 40px;
             }
-        </style>
-        <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
-        <link rel="stylesheet" href="css/main.css">
+          </style>
+          <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+          <link rel="stylesheet" href="css/main.css">
 
-        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-        <![endif]-->
+          <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+        </head>
+        <body>
+          <!--[if lt IE 7]>
+          <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+          <![endif]-->
 
-        <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
+          <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
 
-        <div class="navbar navbar-inverse navbar-fixed-top">
+          <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="navbar-inner">
-                <div class="container">
-                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                        <span class="icon-bar">dsf</span>
-                        <span class="icon-bar">sdf</span>
-                        <span class="icon-bar">sdf</span>
+              <div class="container">
+                <!-- <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> -->
+                  <!--     <span class="icon-bar">dsf</span> -->
+                  <!--     <span class="icon-bar">sdf</span> -->
+                  <!--     <span class="icon-bar">sdf</span> -->
 
-                    </a>
-                    <a class="brand" href="#">Brunneby</a>
-                    <div class="nav-collapse collapse">
-                        <ul class="nav">
-                            <li class="active"><a href="#">Home</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Action</a></li>
-                                    <li><a href="#">Another action</a></li>
-                                    <li><a href="#">Something else here</a></li>
-                                    <li class="divider"></li>
-                                    <li class="nav-header">Nav header</li>
-                                    <li><a href="#">Separated link</a></li>
-                                    <li><a href="#">One more separated link</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <form class="navbar-form pull-right">
-                            <input class="span2" type="text" placeholder="Email">
-                            <input class="span2" type="password" placeholder="Password">
-                            <button type="submit" class="btn">Sign in</button>
-                        </form>
-                    </div><!--/.nav-collapse -->
-                </div>
+                  <!-- </a> -->
+                <a class="brand" href="#">Brunneby</a>
+                <div class="nav-collapse collapse" id="top-nav">
+                  <ul class="nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Action</a></li>
+                      <li><a href="#">Another action</a></li>
+                      <li><a href="#">Something else here</a></li>
+                      <li class="divider"></li>
+                      <li class="nav-header">Nav header</li>
+                      <li><a href="#">Separated link</a></li>
+                      <li><a href="#">One more separated link</a></li>
+                    </ul>
+                    </li>
+                  </ul>
+                  <form class="navbar-form pull-right" id="signin" action="/login" method="post">
+                    <input class="span2" type="text" placeholder="Email" name="username"> 
+                    <input class="span2" type="password" placeholder="Password" name="password">
+                    <input type="submit" class="btn" value="Sign In" />
+                    <a href="/register">Not a User? Register Here</a>
+                  </form>
+                </div><!--/.nav-collapse -->
+              </div>
             </div>
-        </div>
-		<div class="container">
-			<div class="hero-unit">
-        <!--h1>Heading</h1-->
-        <img style ="float: right" src="http://www.brunnebymusteri.se/sites/all/themes/BRUNNEBY/logo.png" alt="logo" />
+          </div>
+          <div class="container">
+            <div class="hero-unit" id="top">
+              <img style ="float: right" src="http://www.brunnebymusteri.se/sites/all/themes/BRUNNEBY/logo.png" alt="logo" />
 
-        <p>
-          This is a Crowd Sourcing Platform sdffffffffffffffffff
-          This is a Crowd Sourcing Platform sdffffffffffffffffff
-          This is a Crowd Sourcing Platform sdffffffffffffffffff
-          This is a Crowd Sourcing Platform sdffffffffffffffffff
-          This is a Crowd Sourcing Platform sdffffffffffffffffff
-          This is a Crowd Sourcing Platform sdffffffffffffffffff
-        
-        </p>
-			    <p>
-			    <a class="btn btn-primary btn-large">
-			    Post Your Idea!
-			    </a>
-			    </p>
-			  </div>
-        	<div class="container-fluid">
-			<div class="row-fluid">
-            <!-- Main hero unit for a primary marketing message or call to action -->
-				<div class="span2">
-					<ul class="nav nav-tabs nav-stacked">
-				    	<li><a href="#">Action</a></li>
-						<li><a href="#">Action</a></li>
-						<li><a href="#">Action</a></li>
-						<li><a href="#">Action</a></li>
-				    </ul>
-				</div>
-				<div class="span10">
-				  <table class="table table-bordered">
-				  	<tr>
-					<th>title</th>
-					<th>votes</th>
-					
-					</tr>
-					<tr>
-						<td>fadgdagdfgasdgasgasgfsdgasgs</td>
-						<td>1</td>
-					</tr>
-				  </table>
-				</div>
-			
-			</div>
-           	<footer>Company 2012</footer>
-        </div> <!-- /container -->
-		</div>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+              <p>
+              This is a Crowd Sourcing Platform sdffffffffffffffffff
+              This is a Crowd Sourcing Platform sdffffffffffffffffff
+              This is a Crowd Sourcing Platform sdffffffffffffffffff
+              This is a Crowd Sourcing Platform sdffffffffffffffffff
+              This is a Crowd Sourcing Platform sdffffffffffffffffff
+              This is a Crowd Sourcing Platform sdffffffffffffffffff
 
-        <script src="js/vendor/bootstrap.min.js"></script>
+              </p>
+              <p>
+              <a class="btn btn-primary btn-large">
+                Post Your Idea!
+              </a>
+              </p>
+            </div>
+            <div class="container-fluid">
+              <div class="row-fluid">
+                <!-- Main hero unit for a primary marketing message or call to action -->
+                <div class="span2" id="side">
+                  <ul class="nav nav-tabs nav-stacked" id="side-nav">
+                    <li><a href="#">Action</a></li>
+                  </ul>
+                </div>
+                <div class="span10" id="center">
+                  <table class="table table-bordered">
+                    <tr>
+                      <th>title</th>
+                      <th>votes</th>
 
-        <script src="js/main.js"></script>
+                    </tr>
+                    <tr>
+                      <td>fadgdagdfgasdgasgasgfsdgasgs</td>
+                      <td>1</td>
+                    </tr>
+                  </table>
+                </div>
 
-        <script>
-            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script>
-    </body>
-</html>
+              </div>
+              <footer>Company 2012</footer>
+            </div> <!-- /container -->
+          </div>
+          <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+          <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+
+            <script src="js/vendor/bootstrap.min.js"></script>
+
+            <script src="js/main.js"></script>
+
+            <script>
+              var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+              (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+                g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+                s.parentNode.insertBefore(g,s)}(document,'script'));
+            </script>
+          </body>
+        </html>
