@@ -1,0 +1,63 @@
+<form class="form-horizontal" id="new-idea-form">
+  <div class="control-group" id="title">
+    <label class="control-label" for="title">Title</label>
+    <div class="controls">
+      <input type="text" name="title">
+    </div>
+  </div>
+  <div class="control-group" id="description">
+    <label class="control-label" for="description">Description</label>
+    <div class="controls">
+      <textarea name="description" />
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="campaign">Campaign</label>
+      <div class="controls">
+        <select name="campaigns_id" id="campaign">
+          <option value="1">test</option>
+        </select>
+      </div>
+    </div>
+    <div class="control-group">
+      <div class="controls">
+        <input type="submit" class="btn" value="Submit Idea" />
+      </div>
+    </div>
+  </form> 
+
+  <div id="idea">
+    <h2 id="title">Idea's Title</h2>
+    <h3 id="campaign">campaign</h3>
+    <div style="float: right; text-align: center" id="voting"> 
+      <h4>Votes</h4>
+      <a class="btn" id="thumbs-up" href="#"><i class="icon-thumbs-up"></i></a>
+      <span id="votes" style="margin: 3px">12</span>
+      <a class="btn" id="thumbs-down" href="#"><i class="icon-thumbs-down"></i></a>
+    </div>
+    <p id="description">Description</p>
+    <table id="comments" class="table">
+      <caption>Comments</caption>
+      <col style="width: 20%">
+      <col style="width: 80%">
+      <tr>
+        <td id="info">user: test <br>created at: today</td>
+        <td id="comment">this is a sample comment</td>
+      </tr>
+    </table>
+    
+    <form id="submit-comment" class="form-inline">
+      <!--div class="control-group">
+        <label class="control-label" for="comment">
+          Your Comment
+        </label>
+        <div class="controls"-->
+          <textarea style="width:80%; height:150px" name="cm">
+          </textarea>
+        <!--/div>
+      </div-->
+      <input style="width:18%; height:100px"type="submit" class="btn" value="Submit" />
+    </form>
+
+  </div>
+

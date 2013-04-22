@@ -38,27 +38,15 @@
                   <!--     <span class="icon-bar">sdf</span> -->
 
                   <!-- </a> -->
-                <a class="brand" href="#">Brunneby</a>
+                <a class="brand" href="http://www.brunnebymusteri.se/">Brunneby</a>
                 <div class="nav-collapse collapse" id="top-nav">
                   <ul class="nav">
-                    <li class="active"><a href="#">Home</a></li>
+                    <li class="active"><a href="/">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Action</a></li>
-                      <li><a href="#">Another action</a></li>
-                      <li><a href="#">Something else here</a></li>
-                      <li class="divider"></li>
-                      <li class="nav-header">Nav header</li>
-                      <li><a href="#">Separated link</a></li>
-                      <li><a href="#">One more separated link</a></li>
-                    </ul>
-                    </li>
                   </ul>
                   <form class="navbar-form pull-right" id="signin" action="/login" method="post">
-                    <input class="span2" type="text" placeholder="Email" name="username"> 
+                    <input class="span2" type="text" placeholder="Username" name="username"> 
                     <input class="span2" type="password" placeholder="Password" name="password">
                     <input type="submit" class="btn" value="Sign In" />
                     <a href="/register">Not a User? Register Here</a>
@@ -81,7 +69,7 @@
 
               </p>
               <p>
-              <a class="btn btn-primary btn-large">
+              <a href="idea" class="btn btn-primary btn-large">
                 Post Your Idea!
               </a>
               </p>
@@ -95,10 +83,15 @@
                   </ul>
                 </div>
                 <div class="span10" id="center">
-                  <table class="table table-bordered">
+                  <h2 id="caption"></h2>
+                  <table class="table table-bordered" id="ideas-summery">
+                    <colgroup>
+                      <col style="width: 90%">
+                      <col style="width: 10%">
+                    </colgroup>
                     <tr>
-                      <th>title</th>
-                      <th>votes</th>
+                      <th>Title</th>
+                      <th style="text-align: center">Votes</th>
 
                     </tr>
                     <tr>

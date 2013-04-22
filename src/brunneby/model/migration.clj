@@ -6,8 +6,7 @@
     (j/create-table :campaigns
                     [:id :serial "PRIMARY KEY"]
                     [:title :varchar "NOT NULL"]
-                    [:description :text "NOT NULL"]
-                    [:created_at :timestamp "NOT NULL" "DEFAULT CURRENT_TIMESTAMP"])))
+                    [:description :text "NOT NULL"])))
 
 (defn create-users-categories []
   (j/with-connection (System/getenv "DATABASE_URL")
@@ -22,9 +21,34 @@
                        [:username :varchar "NOT NULL"]
                        [:password :varchar "NOT NULL"]
                        [:email :varchar "NOT NULL"]
-                       [:cat_id :integer "REFERENCES users_categories"])))
+                       [:users_categories_id :integer "REFERENCES users_categories"])))
 
+(defn create-ideas []
+  (j/with-connection (System/getenv "DATABASE_URL")
+    (j/create-table :ideas
+                    [:id :serial "PRIMARY KEY"]
+                    [:title :varchar "NOT NULL"]
+                    [:description :text "NOT NULL"]
+                    [:users_id :integer "REFERENCES users"]
+                    [:campaigns_id :integer "REFERENCES campaigns"]
+                    )))
 
+(defn create-comments []
+  (j/with-connection (System/getenv "DATABASE_URL")
+    (j/create-table :comments
+                    [:id :serial "PRIMARY KEY"]
+                    [:content :text "NOT NULL"]
+                    [:created_at :timestamp "NOT NULL DEFAULT CURRENT_TIMESTAMP"]
+                    [:users_id :integer "REFERENCES users"]
+                    [:ideas_id :integer "REFERENCES ideas"])))
+(defn create-votes []
+   (j/with-connection (System/getenv "DATABASE_URL")
+     (j/create-table :votes
+                     [:users_id :integer "REFERENCES users"]
+                     [:ideas_id :integer "REFERENCES ideas"]
+                     [:vote :boolean "NOT NULL"]
+                     ["PRIMARY KEY (user_id, idea_id)"]))
+  )
 (defn -main []
   (print "Creating database tables") (flush)
   (create-campaigns)
